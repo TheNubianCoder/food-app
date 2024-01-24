@@ -1,0 +1,13 @@
+@import "./styles/main.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Open+Sans:wght@400;700&family=Roboto:wght@100;400&display=swap');
+
+
+:root {
+    --margin: 0;
+    --padding: 0;
+  }
+  
+  body {
+    margin: var(--margin);
+    padding: var(--padding);
+  }

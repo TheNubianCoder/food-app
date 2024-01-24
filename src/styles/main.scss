@@ -1,0 +1,74 @@
+//import component styles
+@forward "../components/header/header.style.scss"; //for header
+@forward "../components/hero/hero.styles.scss"; //for hero
+
+
+//import pages styles
+
+
+
+
+// main.scss
+
+// Import variables, mixins, and reset
+@use 'mixins';
+@use 'variables' as v;
+@use 'reset';
+
+// Global styles
+body {
+  font-family: v.$body-font;
+  color: v.$text-color;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: v.$heading-font;
+  color: v.$primary-color;
+}
+
+// Button styles
+.button {
+  padding: 10px 20px;
+  background-color: v.$primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(v.$primary-color, 10%);
+  }
+}
+
+// Form styles
+.form {
+  label {
+    display: block;
+    margin-bottom: v.$spacing-unit / 2;
+    font-weight: bold;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: v.$spacing-unit;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+// Booking form specific styles
+.booking-form {
+  @include mixins.flex-container(column, center, center);
+
+  .form {
+    max-width: 400px;
+  }
+
+  .button {
+    margin-top: v.$spacing-unit;
+  }
+}
+
+// Other styles for different sections of the site...
